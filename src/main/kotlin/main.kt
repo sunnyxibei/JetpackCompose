@@ -91,7 +91,7 @@ fun sendUdpData(studentNum: Int, studentPrefix: String) {
 
 private fun sendStudentData(studentPrefix: String, index: Int, attention: Double? = null, connected: Boolean = true) {
     val studentData = StudentAttentionData(
-            userName = if (index < 10) "$studentPrefix$index" else "$studentPrefix$index",
+            userName = if (index < 10) "${studentPrefix}0$index" else "$studentPrefix$index",
             nickname = "黑喵警长$index",
             className = "小学四年级培优班",
             attention = attention?.toInt(),
